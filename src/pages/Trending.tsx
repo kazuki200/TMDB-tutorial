@@ -30,7 +30,7 @@ export const Trending: VFC = memo(() => {
 
   return (
     <div>
-      <span>Trending</span>
+      <span className="uppercase flex justify-center font-serif text-4xl px-1 rounded-3xl text-white">Trending</span>
       <div className="flex flex-wrap justify-between">
         {content &&
           content.map((c: Mv) => (

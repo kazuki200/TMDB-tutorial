@@ -1,6 +1,7 @@
 import { memo, VFC } from "react";
 import { img_300, unavailable } from "../config/config";
 import Badge from '@mui/material/Badge';
+import { ContentModal } from "./ContentModal";
 interface SingleProp {
   id: number;
   title: string;
@@ -22,7 +23,8 @@ export const SingleContent: VFC<SingleProp> = ({
   vote_average,
 }) => {
   return (
-    <div className="flex flex-col w-6/12 sm:w-52 pt-1 my-1 mx-0 bg-gray-600 rounded-xl   relative font-header  hover:bg-white hover:text-black ">
+    // @ts-ignore
+    <ContentModal>
       <Badge badgeContent={vote_average} color={vote_average>6 ? "primary" : "secondary"}/>
       <img
         className="rounded-xl"
@@ -34,6 +36,6 @@ export const SingleContent: VFC<SingleProp> = ({
         {media_type === "tv" ? "TV Series" : "Movie"}
         <span className="flex justify-between pb-1 py-0 px-1 ">{date}</span>
       </span>
-    </div>
+    </ContentModal>
   );
 };

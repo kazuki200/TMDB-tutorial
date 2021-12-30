@@ -39,7 +39,7 @@ export const Movies: VFC = memo(() => {
 
   return (
     <div>
-      <span>Movies</span>
+      <span className="uppercase flex justify-center font-serif text-4xl px-1 rounded-3xl text-white">Movies</span>
 
       <Genres
         // @ts-ignore
